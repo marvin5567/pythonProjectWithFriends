@@ -1,5 +1,5 @@
-from time import sleep
-import art_assets
+from time import sleep # this is used to create a delay between prints, to make the game feel more immersive and less rushed
+import art_assets # this is where all the ascii art will be stored, and we can import it here to use it in our main game file
 
 # player variables
 inventory = []
@@ -10,6 +10,8 @@ game_running = False
 
 ## karim
 def start_game():
+    # this function will contain the main game loop, and will be responsible for calling the intro sequence as well
+    # as any choices/functions the player will need to call
     game_running = True
     intro()
     while game_running:            
@@ -25,15 +27,16 @@ def start_game():
         elif choice == 5:
             if len(inventory) == 0:
                 print("Are you sure about this? You have no evidence to present. Your choice here matters more than you'd know.")
-                yOrn = input("[yes] [no]\n")
-                if (yOrn.lower() == "yes") or (yOrn.lower() == "y"):
+                yesOrno = input("[yes] [no]\n")
+                if (yesOrno.lower() == "yes") or (yesOrno.lower() == "y"):
                     make_accusation(inventory)
-                elif (yOrn.lower() == "no") or (yOrn.lower() == "n"):
+                elif (yesOrno.lower() == "no") or (yesOrno.lower() == "n"):
                     print(f"Good choice, {name}. You should gather more evidence before making an accusation.")
             else:
                 make_accusation(inventory)
 
 def make_accusation(inventory):
+    # function yet to be made
     print("You have presented your evidence.")
 
 def view_evidence(inventory):
@@ -48,10 +51,13 @@ def view_evidence(inventory):
 
 
 def intro():
-    global name
+    # this function will be responsible for the intro sequence, and also take care of a few things
+    # such as setting the player's name
+    global name # we need to declare this as global so that we can modify it inside the function, and have the changes reflected outside the function as well
     start_screen = True
 
     print("================== Murder Mystery ==================")
+    print(art_assets.ART_TITLE)
     print("################# Carnival Canaver #################")
     while start_screen:
         sleep(0.5)
