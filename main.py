@@ -183,10 +183,54 @@ def npc_maintainence(inventory):
 
 ## marwan
 def npc_janitor(inventory):
-    pass
+    while True:
+        if "janitor_closet" in inventory:
+            choice = int(input("Q1- What were you doing? \n Q2:See anything out of the ordinary? \n Q3:  Any theories? Q4: Maintenance saw you grab your mop from the closet right at the time of the murder. 5: leave "))
+            if choice == 1:
+                print ("Look, captain. I was on my smoke break, standing next to that annoying rabbit. This place doesn't pay me enough to work off the clock, let alone babysit corpses.")
+            if choice == 2:
+                print("Other than you bothering me? I saw her Boyfriend storming away from the coaster looking pretty mad earlier. Go bother him.")
+            if choice == 3:
+                print( "Yeah, my theory is lovers' quarrel. Case closed. Now if you don't mind, I got a stain to ignore.")
+            if choice == 4:
+                print("Maintenance is a thief and a liar! And that stupid rabbit is blind, I was right next to him! Get out of my face before I mop the floor with you!") 
+            if choice == 5:
+                break 
+        else:
+            choice = int(input("Q1- What were you doing? \n Q2:See anything out of the ordinary? \n Q3:  Any theories? \n 4: leave"))
+            if choice == 1:
+                print ("Look, captain. I was on my smoke break, standing next to that annoying rabbit. This place doesn't pay me enough to work off the clock, let alone babysit corpses.")
+            if choice == 2:
+                print("Other than you bothering me? I saw her Boyfriend storming away from the coaster looking pretty mad earlier. Go bother him.")
+            if choice == 3:
+                print( "Yeah, my theory is lovers' quarrel. Case closed. Now if you don't mind, I got a stain to ignore.")
+            if choice == 4:
+                break 
 
 def npc_boyfriend(inventory):
-    pass
+     while True:
+        if "victim_phone" in inventory:
+            choice = int(input("Q1- What were you doing? \n Q2:See anything out of the ordinary? \n Q3:  Any theories? Q4: I found her phone. Why didn't she call you?. 5: leave "))
+            if choice == 1:
+                print ( "I was playing Tekken... trying to blow off steam. We had a fight. A stupid, meaningless fight. I stayed here to cool off.")
+            if choice == 2:
+                print("No. I was locked in, headphones on. I haven't moved from this machine in an hour. God, I know how this looks... but I loved her. I didn't do this.")
+            if choice == 3:
+                print("It had to be someone who works here. Someone who knows the blind spots.")
+            if choice == 4:
+                print("Because my phone died! Look! (He shows a dead phone) I swear man, if I had just swallowed my pride and gone with her...") 
+            if choice == 5:
+                break 
+        else:
+            choice = int(input("Q1- What were you doing? \n Q2:See anything out of the ordinary? \n Q3:  Any theories? \n 4: leave"))
+            if choice == 1:
+                print ( "I was playing Tekken... trying to blow off steam. We had a fight. A stupid, meaningless fight. I stayed here to cool off.")
+            if choice == 2:
+                print("No. I was locked in, headphones on. I haven't moved from this machine in an hour. God, I know how this looks... but I loved her. I didn't do this.")
+            if choice == 3:
+                print( "It had to be someone who works here. Someone who knows the blind spots.")
+            if choice == 4:
+                break 
 
 ## zaho
 def coaster_room(inventory):
